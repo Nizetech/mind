@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mindistic',
       theme: ThemeData(
+        fontFamily: 'DMSans',
         primarySwatch: Colors.blue,
       ),
       home: DashBoard(),
