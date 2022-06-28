@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mindlistic/profile.dart';
 
 import 'Utils/theme.dart';
 
@@ -179,13 +181,19 @@ class _DashBoardState extends State<DashBoard> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              "assets/profile_img2.png",
-                              height: 50,
-                              width: 50,
-                              fit: BoxFit.cover,
+                          GestureDetector(
+                            onTap: () {
+                              const Duration(seconds: 10);
+                              Get.to(ProfileScreen());
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                "assets/profile_img2.png",
+                                height: 50,
+                                width: 50,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                           SizedBox(width: 15),
@@ -257,7 +265,7 @@ class _DashBoardState extends State<DashBoard> {
                                         ),
                                         child: Text(
                                           e,
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Color(0xff4bb4b4),
                                             fontSize: 11,
                                             fontWeight: FontWeight.w500,
